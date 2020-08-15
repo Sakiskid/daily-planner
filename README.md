@@ -17,3 +17,10 @@
 ## Execution:
 
 ### Things I learned
+
+
+
+
+notes for me:
+
+- fill the rest of the hours using js append

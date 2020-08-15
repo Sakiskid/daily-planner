@@ -27,13 +27,20 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay-wrapper" class="lead">Date: <span id="currentDay"></span></p>
+      <p id="currentTime-wrapper" class="lead">Time: <span id="currentTime"></span></p>
     </header>
-    <div class="container">
+    <div class="container" id="timeblockContainer">
       <!-- Timeblocks -->
+      <div class="row" id="timeblockTemplate">
+        <div class="col hour"></div>
+        <div class="col time-block"><input type="text"></div>
+        <div class="col saveBtn"><i class="far fa-save fa-5x"></i></div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
