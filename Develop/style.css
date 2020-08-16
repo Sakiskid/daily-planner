@@ -27,11 +27,19 @@ textarea {
   background: lightgray;
   border: 1px solid black;
   border-radius: 6px;
-  padding: 5px 10px;
 }
 
 .navbar .nav-item a {
   font-size: 40px;
+}
+
+.navbar .nav-item .nav-link {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav-item .active {
+  font-style: italic;
 }
 
 .jumbotron {
@@ -58,7 +66,7 @@ textarea {
 }
 
 #timeblockContainer {
-  position: relative;
+  margin-bottom: 500px;
 }
 
 .row {

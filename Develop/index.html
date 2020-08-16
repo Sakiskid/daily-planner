@@ -23,7 +23,7 @@
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="80">
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -34,12 +34,12 @@
     <nav class="navbar navbar-expand-lg sticky-top">
       <ul class="nav">
         <li class="nav-item" id="navItemTemplate">
-          <a></a>
+          <a class="nav-link"></a>
         </li>
       </ul>
     </nav>
 
-    <div class="container" id="timeblockContainer" data-spy="scroll" data-target=".navbar" data-offset="0">
+    <div class="container" id="timeblockContainer">
       <!-- Timeblocks -->
       <div class="row timeblockRow" id="timeblockTemplate">
         <div class="col-2 hour"></div>
