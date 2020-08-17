@@ -12,7 +12,7 @@ function init() {
 function setInitTimes() {
     let m = moment();
     currentDayEl.text(m.format("dddd, MMMM Do YYYY"));
-    
+
     // Current second SetInterval
     setInterval(() => {
         m = moment();
@@ -28,7 +28,7 @@ function setInitTimes() {
 
 function getTimeblockLocalstorage(key) {
     // See if the key exists, and return the value if so
-    if(localStorage.getItem(key)) {
+    if (localStorage.getItem(key)) {
         return localStorage.getItem(key);
     }
     // Otherwise, create an empty key
@@ -43,10 +43,10 @@ function populateTimeblockWithTemplates() {
     // 2. Assign an individual ID for each hour in military time
     let m = moment();
     m.hour(0);
-    for(let i = 0; i < 24; i++) {
+    for (let i = 0; i < 24; i++) {
         var newBlock = timeblockTemplateEl.clone();
         var currentHourString = "timeblockHour" + i;
-        
+
         // Setting ID of newBlock
         newBlock.removeAttr("id");
         newBlock.attr("id", currentHourString);
@@ -55,7 +55,7 @@ function populateTimeblockWithTemplates() {
         var hourEl = newBlock.find(".hour");
         m.hour(i);
         hourEl.text(m.format("HH"));
-        
+
         // Setting Input / Initializing localStorage
         newBlock.find("input").attr("value", getTimeblockLocalstorage(currentHourString));
 
@@ -69,7 +69,7 @@ function populateNavbarScrollspy() {
     // For a better understanding of this function, look at populateTimeblockWithTemplates()
     var navItemTemplateEl = $("#navItemTemplate");
     var navEl = $(".nav");
-    for(let i = 0; i < 24; i++) {
+    for (let i = 0; i < 24; i++) {
         // Set ID of new nav item
         var newNavItem = navItemTemplateEl.clone();
         var currentNavItemIDString = "navItem" + i;
@@ -86,16 +86,16 @@ function populateNavbarScrollspy() {
     navItemTemplateEl.remove();
 }
 
-function updateTheHour () {
+function updateTheHour() {
     var timeblocks = $(".timeblockRow");
     m = moment();
-    
+
     for (let i = 0; i < 24; i++) {
         timeblocks.get(i).classList.remove("past");
         timeblocks.get(i).classList.remove("present");
         timeblocks.get(i).classList.remove("future");
 
-        if(i < m.hour()) {
+        if (i < m.hour()) {
             // add past class
             timeblocks.get(i).classList.add("past");
         }

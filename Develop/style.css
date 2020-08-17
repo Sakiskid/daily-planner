@@ -1,5 +1,5 @@
 body {
-  background-color: gainsboro;
+  background-color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -17,20 +17,29 @@ textarea {
 
 .navbar {
   background-color: gray;
-  z-index: 10;
-  height: 60px;
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 10px;
   border-radius: 10px;
   justify-content: center;
+  z-index: 10;
 }
 
 .navbar .nav-item {
   background: lightgray;
   border: 1px solid black;
   border-radius: 6px;
+  flex-basis: 4%;
+  padding: 5px 0px;
 }
 
 .navbar .nav-item a {
-  font-size: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
 }
 
 .navbar .nav-item .nav-link {
@@ -40,6 +49,27 @@ textarea {
 
 .navbar .nav-item .active {
   font-style: italic;
+  color: #4DD659;
+}
+
+@media only screen and (max-width: 1150px) {
+  .navbar .nav-item {
+    flex-basis: 8%;
+  }
+}
+
+.navbar:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background-color: red;
+  z-index: -2;
+}
+
+.nav {
+  width: 100%;
+  justify-content: center;
 }
 
 .jumbotron {
@@ -48,6 +78,7 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin-bottom: 0;
 }
 
 .description {
@@ -67,6 +98,10 @@ textarea {
 
 #timeblockContainer {
   margin-bottom: 500px;
+}
+
+#timeblockContainer .timeblockRow {
+  scroll-margin-top: 45px;
 }
 
 .row {
@@ -122,9 +157,15 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  align-self: center;
+  text-align: center;
+}
+
+.saveBtn i {
+  font-size: 40px;
+  transition: font-size .3s ease-in-out;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+  font-size: 60px;
 }
