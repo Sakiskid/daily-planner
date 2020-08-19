@@ -14,6 +14,7 @@
 - scrollspy
 
 ##### Noteworthy:
+- getLocalStorage function
 
 ## Execution:
 

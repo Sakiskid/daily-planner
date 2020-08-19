@@ -29,6 +29,12 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay-wrapper" class="lead">Date: <span id="currentDay"></span></p>
       <p id="currentTime-wrapper" class="lead">Time: <span id="currentTime"></span></p>
+      <input type="checkbox" id="militaryTimeCheckbox">
+      <label for="militaryTimeCheckbox">Use Military Time?</label>
+      <br>
+      <input type="checkbox" id="showPastTasksCheckbox">
+      <label for="showPastTasksCheckbox">Show Past Tasks?</label>
+      <h2>To use: Type your tasks into the input, then click save!</h2>
     </header>
 
     <div class="container" id="timeblockContainer">
@@ -42,8 +48,8 @@
       <!-- Timeblocks -->
       <div class="row timeblockRow" id="timeblockTemplate">
         <div class="col-2 hour"></div>
-        <div class="col-8 time-block"><input type="text"></div>
-        <div class="col-2 saveBtn"><span><i class="far fa-save fa-1x"></i></span></div>
+        <div class="col-9 time-block"><input type="text"></div>
+        <div class="col-1 saveBtn"><span><i class="far fa-save fa-1x"></i></span></div>
       </div>
     </div>
 
