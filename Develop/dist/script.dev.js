@@ -107,7 +107,9 @@ function updateTheHour() {
 
 function saveTimeblockToLocalStorage() {
   console.log("Saving timeblock to local storage. Button pressed: ", this);
-}
+} // Using the event listener on Document, then selecting .saveBtn
+// This way it catches dynamically added elements
 
-$("body").on("click", saveTimeblockToLocalStorage);
+
+$(document).on("click", ".saveBtn", saveTimeblockToLocalStorage);
 init();

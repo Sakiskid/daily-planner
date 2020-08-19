@@ -19,7 +19,7 @@
 
 ### Things I learned
 - how to center fa objects
-
+- using document event listener for dyanmically added objects
 
 
 notes for me:
