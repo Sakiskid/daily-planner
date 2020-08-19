@@ -105,4 +105,9 @@ function updateTheHour() {
   }
 }
 
+function saveTimeblockToLocalStorage() {
+  console.log("Saving timeblock to local storage. Button pressed: ", this);
+}
+
+$("body").on("click", saveTimeblockToLocalStorage);
 init();

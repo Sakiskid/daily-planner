@@ -157,15 +157,18 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  align-self: center;
-  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.saveBtn i {
+.saveBtn span {
+  align-items: center;
+  display: flex;
   font-size: 40px;
   transition: font-size .3s ease-in-out;
 }
 
-.saveBtn i:hover {
+.saveBtn span:hover {
   font-size: 60px;
 }

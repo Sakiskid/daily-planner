@@ -11,13 +11,14 @@
 ## Description:
 
 ## Features
+- scrollspy
 
 ##### Noteworthy:
 
 ## Execution:
 
 ### Things I learned
-
+- how to center fa objects
 
 
 
