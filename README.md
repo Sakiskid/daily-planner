@@ -29,8 +29,3 @@ Here is a little daily planner I've created. It's good for remembering things th
 ### Things I learned
 - How to center FA objects. I had to set both the FontAwesome wrapper and it's parent to `flex`. Only then was I able to vertically align the objects.
 - I used three event listeners in this code, one of which listened for changes to the `document`. I needed to target the document specifically (and then the .saveBtn) because my saveBtns were dynamically added after the page had loaded. A normal eventlistener wouldn't have worked here.
-
-
-notes for me:
-
-- fill the rest of the hours using js append
