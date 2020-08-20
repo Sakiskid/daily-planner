@@ -65,13 +65,11 @@ function populateTimeblockWithTemplates() {
     var currentHourString = "timeblockHour" + i; // Setting ID of newBlock
 
     newBlock.removeAttr("id");
-    newBlock.attr("id", currentHourString); // DEPRECATED Setting Hour
-
-    var hourEl = newBlock.find(".hour");
-    m.hour(i); // Setting Input / Initializing localStorage
+    newBlock.attr("id", currentHourString); // Setting Input / Initializing localStorage
 
     newBlock.find("input").attr("value", getLocalStorage(currentHourString)); // Display
 
+    var hourEl = newBlock.find(".hour");
     hourEl.text(getHourInCurrentTimeFormat(i));
     timeblockContainer.append(newBlock);
   } // Remove the initial timeblock Template
@@ -91,10 +89,7 @@ function populateNavbarScrollspy() {
     var newNavItem = navItemTemplateEl.clone();
     var currentNavItemIDString = "navItem" + i;
     newNavItem.removeAttr("id");
-    newNavItem.attr("id", currentNavItemIDString); // DEPRECATED Using moment here to populate using military time
-    // m.hour(i);
-    // let newText = m.format("HH");
-    // Add href attr for corresponding timeblock id
+    newNavItem.attr("id", currentNavItemIDString); // Add href attr for corresponding timeblock id
 
     var navItemButton = newNavItem.find("a");
     navItemButton.attr("href", "#timeblockHour" + i); // Display
