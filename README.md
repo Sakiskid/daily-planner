@@ -1,10 +1,10 @@
-![Alt Text](image-link)
+![Daily Planner In Use](preview.gif)
 
 ---
 
 # Daily Planner!
 
-### [Click Here To Start](link)
+### [Click Here To Start Planning](https://sakiskid.github.io/daily-planner/)
 
 #### **DATE** 
 
